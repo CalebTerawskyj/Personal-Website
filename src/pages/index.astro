@@ -1,11 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navigation from '../components/navigation.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <favicon href="../public/favicon.png" />
+	<title>Caleb Terawskyj</title>
+</head>
+<body class="bg-neutral-100 text-gray-900 font-sans"></body>
+<Navigation / >
+</Navigation>
+
+<p class="mb-6">Hello👋, my name is Caleb. Technical hobbyist, Support Analyst, and creative problem solver.<br />I build cool things with servers, code, and caffeine.</p>
+</body>
