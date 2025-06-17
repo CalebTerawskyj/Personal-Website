@@ -12,5 +12,3 @@ As I learn new skills, and contiune to play with the code and learn new features
 For now, enjoy my very basic website 😆
 
 This initially started as an Astro Boilerplate, but I've since removed most of that and started fresh with my own components, pages and layouts.
-
-```text
