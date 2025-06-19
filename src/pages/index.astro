@@ -8,12 +8,30 @@ import '../styles/global.css';
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <favicon href="../public/favicon.png" />
-	<title>Caleb Terawskyj</title>
+  	<favicon href="../public/favicon.png" />
+	<title>Caleb Terawskyj - Home</title>
 </head>
 <body class="bg-neutral-100 text-gray-900 font-sans"></body>
 <Navigation / >
 </Navigation>
 
-<p class="mb-6">Hello👋, my name is Caleb. Technical hobbyist, Support Analyst, and creative problem solver.<br />I build cool things with servers, code, and caffeine.</p>
+<!--- Hero Section -->
+<section class="bg-gradient-to-r from-emerald-800 via-cyan-700 to-cyan-950 text-slate-100 py-20 min-h-screen">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+	<h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto pt-40">Hello👋</h1>
+	<p class="text-slate-100 text-lg md:text-2xl mb-8">I'm Caleb Terawskyj, Technical hobbyist, Support Analyst, and creative problem solver.</p>
+	<p class="text-slate-100 text-lg md:text-2xl mb-8 leading-0 pb-20">I build cool things with servers, code, and caffeine.</p>
+	<button class="bg-cyan-900 text-slate-100 px-6 py-3 rounded-full font-semibold hover:bg-cyan-700 transition duration-300 mx-auto">
+		<a href="#projects">View Projects</a>
+</section>
+<!--- Projects -->
+<section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+	<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		<ProjectCard title="Project 1" description="Description of project 1" link="/projects/project1" />
+		<ProjectCard title="Project 2" description="Description of project 2" link="/projects/project2" />
+		<ProjectCard title="Project 3" description="Description of project 3" link="/projects/project3" />
+	</div>
+</section>
 </body>
