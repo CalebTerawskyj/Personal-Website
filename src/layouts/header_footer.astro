@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+const { title } = Astro.props;
+import Footer from '../components/footer.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="bg-neutral-100 shadow-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+    <div class="flex items-center">
+        <a href="/" class="text-xl font-bold text-gray-900">Caleb Terawskyj</a>
+    </div>
+    <nav class="hidden md:block">
+    <div class="ml-10 flex space-x-4">
+        <button class="font-semibold bg-cyan-900 text-slate-100 px-4 py-2 rounded-full hover:bg-cyan-700">
+            <a href="/">Home</a>
+        </button>
+        <button class="font-semibold bg-cyan-900 text-slate-100 px-4 py-2 rounded-full hover:bg-cyan-700">
+            <a href="/blog">Blog</a>
+        </button>
+        <button class="font-semibold bg-cyan-900 text-slate-100 px-4 py-2 rounded-full hover:bg-cyan-700">
+            <a href="/projects">Projects</a>
+        </button>
+        <button class="font-semibold bg-cyan-900 text-slate-100 px-4 py-2 rounded-full hover:bg-cyan-700">
+            <a href="/about">About</a>
+        </button>
+        <button class="font-semibold bg-cyan-900 text-slate-100 px-4 py-2 rounded-full hover:bg-cyan-700">
+            <a href="../contact">Contact</a>
+        </button>
+    </div>
+    </nav>
+</div>
+</div>
+</div>
+<Footer />
+</Footer>
+</body>
+</html>

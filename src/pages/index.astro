@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/navigation.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import Footer from '../components/footer.astro';
 import '../styles/global.css';
 ---
 
@@ -30,20 +31,54 @@ import '../styles/global.css';
   </div>
 </div>
 <!--- End Alert Advising that website is a work in progress - To be removed at a later date -->
-<div class="text-center">
+<div class="text-left"></div>
 	<h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto pt-40">Hello👋</h1>
-	<p class="text-slate-100 text-lg md:text-2xl mb-8">I'm Caleb Terawskyj, Technical hobbyist, Support Analyst, and creative problem solver.</p>
+	<p class="text-slate-100 text-lg md:text-2xl mb-8"><span id="typed-text"></span><span id="cursor" class="blink">█</span></p>
 	<p class="text-slate-100 text-lg md:text-2xl mb-8 leading-0 pb-20">I build cool things with servers, code, and caffeine.</p>
-	<button class="bg-cyan-900 text-slate-100 px-6 py-3 rounded-full font-semibold hover:bg-cyan-700 transition duration-300 mx-auto">
+	<button class="bg-cyan-900 text-slate-100 px-6 py-3 rounded-full font-semibold hover:bg-cyan-700 transition duration-300 mx-auto mr-5">
 		<a href="#projects">View Projects</a>
+		<button class="bg-cyan-900 text-slate-100 px-6 py-3 rounded-full font-semibold hover:bg-cyan-700 transition duration-300 mx-auto">
+		<a href="#projects">About Me</a>
 </section>
+<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+	<h2 class="text-3xl font-bold mb-6 text-center">The idea behind this website</h2>
+	<p class="text-lg text-gray-700 mb-4 whitespace-pre-line">I am a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br>
+		I am new to the world of development, currently working in the managed services field. I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website<br>
+		This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br>
+		Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
+	</p>
+</section>
+
+
+
 <!--- Projects -->
 <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 	<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-		<ProjectCard title="Project 1" description="Description of project 1" link="/projects/project1" />
+		<ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/project1" />
 		<ProjectCard title="Project 2" description="Description of project 2" link="/projects/project2" />
 		<ProjectCard title="Project 3" description="Description of project 3" link="/projects/project3" />
 	</div>
 </section>
+	<Footer />
+</Footer>
 </body>
+
+<script is:inline>
+  const text = "Technical hobbyist, Support Analyst, and creative problem solver.";
+  const typedText = document.getElementById("typed-text");
+  const cursor = document.getElementById("cursor");
+
+  let i = 0;
+  const speed = 40; // typing speed in ms
+
+  function typeWriter() {
+    if (i < text.length) {
+      typedText.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeWriter);
+</script>
