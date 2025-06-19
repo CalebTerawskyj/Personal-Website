@@ -11,5 +11,12 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "routes":[
+  {
+      "pattern": "calebterawskyj.com",
+      "custom_domain": true
+    }
+  ],
 }
+
