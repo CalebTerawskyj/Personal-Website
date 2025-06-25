@@ -4,9 +4,8 @@
 
 ### Astro JS
 
-### Tailwind CSS v3
+### Tailwind CSS v4
 
-```text
 This project will be ever evolving. I'm not qutie sure if there will ever be a finished version of this.
 As I learn new skills, and contiune to play with the code and learn new features. I'm sure things will change.
 For now, enjoy my very basic website 😆
