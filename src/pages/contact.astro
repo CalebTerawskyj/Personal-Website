@@ -1,0 +1,42 @@
+---
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+import MainLayout from '../layouts/main_layout.astro';
+import '../styles/global.css';
+---
+
+<MainLayout title="Contact">
+    <Navigation />
+
+    <section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 min-h-screen">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-neutral-100 text-4xl md:text-6xl font-bold justify-center mx-auto py-20">Contact Me</h1>
+            <p class="text-lg text-center text-neutral-100 mb-8">Feel free to reach out via email or connect with me on social media!</p>
+                <div class="dark:text-neutral-100 dark:bg-gray-700 max-w-2xl mx-auto p-6">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 max-w-md mx-auto bg-slate-900 p-6 rounded-lg shadow-lg">
+                    <input type="hidden" name="access_key" value="92054f32-2f2d-4c84-a992-07a73cdaf4e1" />
+                    <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+                    <div>
+                        <label class="block text-slate-100 mb-1">Name</label>
+                        <input type="text" name="name" required class="w-full p-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none" />
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-100 mb-1">Email</label>
+                        <input type="email" name="email" required class="w-full p-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none" />
+                    </div>
+
+                    <div>
+                        <label class="block text-slate-100 mb-1">Message</label>
+                        <textarea name="message" required class="w-full p-2 rounded bg-slate-800 border border-slate-700 text-slate-100 focus:border-cyan-500 focus:ring-cyan-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-neutral-100 hover:text-neutral-200 font-bold py-2 rounded transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <Footer />
+</MainLayout>
