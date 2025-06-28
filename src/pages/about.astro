@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import Navigation from "../components/navigation.astro"
+import MainLayout from '../layouts/main_layout.astro';
+import Footer from '../components/footer.astro';
+---
+
+<MainLayout title="About">
+    </MainLayout>
+<Navigation>
+    </Navigation>
+
+<div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
+    <section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 min-h-px1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto py-20">About Me</h1>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 min-h-screen">
+        <h2 class="text-3xl font-bold mb-6 text-center">Who Am I</h2>
+        <article class="dir-rtl">
+            <p class="text-lg mb-4 whitespace-pre-line">
+            My name is Caleb, I'm 23 years old, and I live in Australia. I am currently studying my Masters of Cyber Security and Network Administration at Charles Sturt University.
+
+            I have a passion for technology and problem-solving, and love to learn new things. I have experience in various fields, with my current role being in managed services, focusing on Enterprise Mobility Management, where I spend most of my time troubleshooting issues and ensuring smooth operations for end users.
+            This can include anything from setting up new devices, to troubleshooting issues with existing devices, to ensuring that all devices are compliant with company policies and procedures. I have experience with a variety of tools and technologies, including Microsoft Intune, Azure Active Directory, and various mobile device management solutions.
+
+            In terms of development, I am still relatively new to the field, but I am eager to learn and grow my skills. I have some small experience with various programming languages, including Python, JavaScript, and HTML (Fight me, I include this as a programming language 😆), and I am always looking for new challenges and opportunities to learn.
+
+            The first of my major projects is this website, which I built using Astro as the framework and Tailwind CSS for styling. I am still learning and growing my skills, but I hope to continue to improve and add new features to this website as I go.
+            </p>
+            </article>
+    </section>
+</div>
+
+<Footer>
+    </Footer>

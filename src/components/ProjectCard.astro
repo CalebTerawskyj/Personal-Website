@@ -8,7 +8,7 @@ interface Props {
 
 const { title, description, link, tech } = Astro.props;
 ---
-<div class="relative bg-white/90 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur hover:text-shadow-lg">
+<div class="relative bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur hover:text-shadow-lg dark:text-neutral-100 dark:bg-gray-700">
   <!-- Tech Logos -->
   {(tech ?? []).length > 0 && (
     <div class="absolute top-3 right-3 flex gap-2">
@@ -19,7 +19,7 @@ const { title, description, link, tech } = Astro.props;
   )}
 
   <h3 class="text-xl font-semibold text-neutral-50 mb-2">{title}</h3>
-  <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">{description}</p>
+  <p class="text-sm text-gray-300 mb-4 dark:text-neutral-100">{description}</p>
 
   {link && (
     <a href={link} class="text-sm text-cyan-100 hover:underline">Learn more →</a>

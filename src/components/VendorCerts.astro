@@ -1,0 +1,15 @@
+---
+import '../styles/global.css';
+
+interface Props {
+    year_taken: string;
+    year_expiry: string;
+    cert_link: string;
+    cert_logo: string;
+    cert_name: string;
+    cert_description: string;
+}
+
+const { year_taken, year_expiry, cert_link, cert_logo, cert_name, cert_description } = Astro.props;
+
+---

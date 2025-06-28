@@ -4,86 +4,60 @@ import ProjectCard from '../components/ProjectCard.astro';
 import StatsCard from '../components/StatsCard.astro';
 import Footer from '../components/footer.astro';
 import MainLayout from '../layouts/main_layout.astro';
+import SkillsCard from '../components/SkillsCard.astro';
 import '../styles/global.css';
 ---
 
 <MainLayout title="Home">
-	</MainLayout>
 
-<Navigation / >
-</Navigation>
 
-<!--- Hero Section -->
-<section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 py-20 min-h-screen">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!--- Alert Advising that website is a work in progress - To be removed at a later date -->
-	<div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
-  <div class="flex">
-    <div class="py-1"><svg class="fill-current h-6 w-6 text-teal-500 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg></div>
-    <div>
-      <p class="font-bold">Hello! Thank you for visiting my website</p>
-      <p class="text-sm">Just letting you know that this is an active work in progress. Things are not complete, and there is plenty for me to learn and add</p>
-	  <p class="text-sm">Just like this alert. This is something new I learnt. Nifty, isn't it? Anyway, please check back later for updates, and feel free to reach out if you have any questions or suggestions!</p>
-    </div>
-  </div>
+<Navigation>
+	</Navigation>
+<div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
+	<!--- Hero Section -->
+	<section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 py-20 min-h-screen dark:">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-left"></div>
+				<h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto pt-40">HELLO👋 I'M CALEB TERAWSKYJ</h1>
+				<p class="text-slate-100 text-lg md:text-2xl mb-8"><span id="typed-text"></span><span id="cursor" class="blink">█</span></p>
+			</div>
+		</section>
+	<!--- Idea Section -->
+	<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<h2 class="text-3xl font-bold mb-6 text-center">The idea behind this website</h2>
+		<p class="text-lg text-gray-700 mb-4 whitespace-pre-line dark:text-neutral-100">I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br>
+			I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website<br>
+			This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br>
+			Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
+		</p>
+	</section>
+
+	<!--- Stats Section -->
+
+	<section id="stats" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<StatsCard title="Projects Built" value={3} />
+			<StatsCard title="Coffees Drank" value="∞" />
+			<StatsCard title="Years in IT" value={4} />
+		</div>
+	</section>
+
+	<!--- Projects -->
+	<section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+		<p class="text-lg text-gray-700 mb-8 text-center dark:text-neutral-100">I'm still very new to development, but I thought it should be good to at least have a small projects area. I'm sure this will grow as time goes.</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/astro_dev" tech={["tailwind", "astro"]}/>
+			<ProjectCard title="Personal Management System" description="A central hub to manage my day-to-day items like notes, tasks, calendar, planner etc." link="/projects/pm_sys" tech={["tailwind", "react"]} />
+			<ProjectCard title="Basic Python Scripts" description="A few scripts to automate things in my life." description="(I'm still learning...)" link="/projects/project3" tech={["python"]} />
+		</div>
+	</section>
+
+	<Footer>
+		</Footer>
+
+
+	<script src="./js/counter.js" defer></script>
+	<script src="./js/hero_cursor.js" defer></script>
 </div>
-<!--- End Alert Advising that website is a work in progress - To be removed at a later date -->
-<div class="text-left"></div>
-	<h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto pt-40">HELLO👋 I'M CALEB TERAWSKYJ</h1>
-	<p class="text-slate-100 text-lg md:text-2xl mb-8"><span id="typed-text"></span><span id="cursor" class="blink">█</span></p>
-</section>
-
-<!--- Idea Section -->
-<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-	<h2 class="text-3xl font-bold mb-6 text-center">The idea behind this website</h2>
-	<p class="text-lg text-gray-700 mb-4 whitespace-pre-line">I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br>
-		I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website<br>
-		This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br>
-		Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
-	</p>
-</section>
-
-<!--- Stats Section -->
-
-<section id="stats" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-		<StatsCard title="Projects Built" value={3} />
-		<StatsCard title="Coffees Drank" value="∞" />
-		<StatsCard title="Years in IT" value={4} />
-	</div>
-</section>
-
-<!--- Projects -->
-<section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-	<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-	<p class="text-lg text-gray-700 mb-8 text-center">I'm still very new to development, but I thought it should be good to at least have a small projects area. I'm sure this will grow as time goes.</p>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-		<ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/astro_dev" tech={["tailwind", "astro"]}/>
-		<ProjectCard title="Personal Management System" description="A central hub to manage my day-to-day items like notes, tasks, calendar, planner etc." link="/projects/pm_sys" tech={["tailwind", "react"]} />
-		<ProjectCard title="Basic Python Scripts" description="A few scripts to automate things in my life." description="(I'm still learning...)" link="/projects/project3" tech={["python"]} />
-	</div>
-</section>
-
-<Footer>
-</Footer>
-
-<script src="./counter.js" defer></script>
-<script is:inline>
-  const text = "From helpdesk to homelab — I build things that work (and fix the ones that don’t).";
-  const typedText = document.getElementById("typed-text");
-  const cursor = document.getElementById("cursor");
-
-  let i = 0;
-  const speed = 40; // typing speed in ms
-
-  function typeWriter() {
-    if (i < text.length) {
-      typedText.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", typeWriter);
-</script>
-
+</MainLayout>
