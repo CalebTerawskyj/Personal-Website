@@ -13,51 +13,53 @@ import '../styles/global.css';
 
 <Navigation>
 	</Navigation>
-<div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
-	<!--- Hero Section -->
-	<section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 py-20 min-h-screen dark:">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-left"></div>
+
+	<div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
+		<!--- Hero Section -->
+		<section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-900 text-slate-100 py-20 min-h-screen dark:">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h1 class="text-slate-100 text-4xl md:text-6xl font-bold mb-4 justify-center mx-auto pt-40">HELLO👋 I'M CALEB TERAWSKYJ</h1>
 				<p class="text-slate-100 text-lg md:text-2xl mb-8"><span id="typed-text"></span><span id="cursor" class="blink">█</span></p>
 			</div>
 		</section>
-	<!--- Idea Section -->
-	<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<h2 class="text-3xl font-bold mb-6 text-center">The idea behind this website</h2>
-		<p class="text-lg text-gray-700 mb-4 whitespace-pre-line dark:text-neutral-100">I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br>
-			I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website<br>
-			This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br>
-			Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
-		</p>
-	</section>
+		<!--- Idea Section -->
+		<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<h2 class="text-3xl font-bold mb-6 text-center">The idea behind this website</h2>
+			<p class="text-lg text-gray-700 mb-4 whitespace-pre-line dark:text-neutral-100">I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br>
+				I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website<br>
+				This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br>
+				Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
+			</p>
+		</section>
 
-	<!--- Stats Section -->
+		<!--- Stats Section -->
 
-	<section id="stats" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			<StatsCard title="Projects Built" value={3} />
-			<StatsCard title="Coffees Drank" value="∞" />
-			<StatsCard title="Years in IT" value={4} />
-		</div>
-	</section>
+		<section id="stats" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<StatsCard title="Projects Built" value={3} />
+				<StatsCard title="Coffees Drank" value="∞" />
+				<StatsCard title="Years in IT" value={4} />
+			</div>
+		</section>
 
-	<!--- Projects -->
-	<section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-		<p class="text-lg text-gray-700 mb-8 text-center dark:text-neutral-100">I'm still very new to development, but I thought it should be good to at least have a small projects area. I'm sure this will grow as time goes.</p>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			<ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/astro_dev" tech={["tailwind", "astro"]}/>
-			<ProjectCard title="Personal Management System" description="A central hub to manage my day-to-day items like notes, tasks, calendar, planner etc." link="/projects/pm_sys" tech={["tailwind", "react"]} />
-			<ProjectCard title="Basic Python Scripts" description="A few scripts to automate things in my life." description="(I'm still learning...)" link="/projects/project3" tech={["python"]} />
-		</div>
-	</section>
+		<!--- Projects -->
+		<section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+			<p class="text-lg text-gray-700 mb-8 text-center dark:text-neutral-100">I'm still very new to development, but I thought it should be good to at least have a small projects area. I'm sure this will grow as time goes.</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/astro_dev" tech={["tailwind", "astro"]}/>
+				<ProjectCard title="Personal Management System" description="A central hub to manage my day-to-day items like notes, tasks, calendar, planner etc." link="/projects/pm_sys" tech={["tailwind", "react"]} />
+				<ProjectCard title="Basic Python Scripts" description="A few scripts to automate things in my life." description="(I'm still learning...)" link="/projects/project3" tech={["python"]} />
+			</div>
+		</section>
 
-	<Footer>
-		</Footer>
+		<Footer>
+			</Footer>
 
 
-	<script src="./js/counter.js" defer></script>
-	<script src="./js/hero_cursor.js" defer></script>
-</div>
+		<script src="./js/counter.js" defer></script>
+		<script src="./js/hero_cursor.js" defer></script>
+	</div>
+<style style="background-size: 200% 200%; animation: gradientMove 20s linear infinite;"></style>
+
 </MainLayout>

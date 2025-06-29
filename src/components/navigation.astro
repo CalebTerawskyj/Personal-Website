@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 ---
+<!-- Primary Menu -->
 <nav class="bg-neutral-100 shadow-md dark:bg-gray-800">
 <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
@@ -22,11 +23,36 @@ import '../styles/global.css';
         </ul>
     </div>
     </div>
+<!-- Mobile menu button -->
     <div class="flex md:hidden">
-        <button id="mobile-menu-button" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium">
+        <button id="mobile-menu-button" class="text-gray-900 hover:bg-gray-200 dark:text-neutral-300 dark:hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
     </div>
+</div>
+<!-- Mobile menu, show/hide based on menu state -->
+<div id="mobile-menu" class="hidden flex-col space-y-2 bg-white dark:bg-gray-800 p-4 rounded-md shadow-md text-right">
+    <a href="/" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">Home</a>
+    <a href="/about" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">About</a>
+    <a href="/projects" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">Projects</a>
+    <a href="/blog" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">Blog</a>
+    <a href="/contact" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">Contact</a>
+    <a href="/resume" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">Resume</a>
+    <button id="mobile-theme-toggle" class="text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-medium dark:text-neutral-300 dark:hover:bg-gray-700">🌑</button>
+</div>
+
 <script src="/js/theme_toggle.js" defer></script>
+<script>
+// Mobile menu toggle
+const button = document.getElementById('mobile-menu-button');
+const menu = document.getElementById('mobile-menu');
+
+if (button && menu) {
+    button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    });
+}
+
+</script>
