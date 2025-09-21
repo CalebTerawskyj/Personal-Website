@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/main_layout.astro';
+import Footer from '../../components/footer.astro';
+import Navigation from '../../components/navigation.astro';
+import HeaderBanner from '../../components/HeaderBanner.astro';
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection('blog');
+    return allPosts.map(post => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<MainLayout title={post.data.title}>
+    <Navigation />
+    <HeaderBanner title={post.data.title} />
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article class="prose lg:prose-xl dark:prose-invert">
+            <p class="text-gray-500 dark:text-neutral-400 text-sm">{post.data.date}</p>
+        </br>
+            <Content />
+        </article>
+    </div>
+    <Footer />
+</MainLayout>
