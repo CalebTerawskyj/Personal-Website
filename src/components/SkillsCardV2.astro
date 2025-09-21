@@ -7,7 +7,7 @@ interface Props {
 const { title, icon } = Astro.props;
 ---
 
-<div class="flex items-center space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+<div class="flex items-center space-x-4 backdrop-blur-sm border border-gray-200 bg-gray-700 dark:border-gray-700 rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
     <img src={`/icons/${icon}.svg`} alt={title} class="w-8 h-8" />
     <h3 class="text-lg font-medium text-white">{title}</h3>
 </div>

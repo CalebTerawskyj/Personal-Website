@@ -5,9 +5,9 @@ import StatsCard from '../components/StatsCard.astro';
 import Footer from '../components/footer.astro';
 import MainLayout from '../layouts/main_layout.astro';
 import SkillsCard from '../components/SkillsCard.astro';
+import SkillsCardV2 from "../components/SkillsCardV2.astro";
 import '../styles/global.css';
 
-// Importing your image
 import calebImage from '../assets/img/caleb_terawskyj.jpg';
 ---
 
@@ -32,25 +32,29 @@ import calebImage from '../assets/img/caleb_terawskyj.jpg';
 			<img src={calebImage.src} alt="Caleb Terawskyj" class="rounded-full shadow-lg w-full max-w-sm mx-auto transition-transform duration-300 hover:scale-105" />
 		</div>
 	<div class="md:w-2/3">
-        <h2 class="text-3xl font-bold mb-4">The idea behind this website</h2>
-        <p class="text-lg mb-4 whitespace-pre-line">
-		I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.
-        I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website.
-        This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="mb-4 whitespace-pre-line">
+		I'm a passionate nerd with a keen interest in solving problems through technology. My journey has led me to explore various fields, including software development, system administration, and creative problem-solving.<br/>
+        I am new to the world of development. Currently working in the managed services field; I spend more time troubleshooting issues and making sure things run smoothly for end users. But! I am eager to continue to learn new skills in my development journey and hope to share them progressively on this website.<br/>
+        This website serves as a platform to showcase my projects, share my thoughts, and connect with like-minded individuals. I believe in the power of collaboration and knowledge sharing, and I hope to contribute to the tech community through this space.<br/>
         Feel free to explore my projects, read my blog posts, and reach out if you have any questions or suggestions. I'm always open to learning new things and collaborating with others.
         </p>
     </div>
     </section>
 
     <!--- Skills Section -->
-    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<h2 class="text-3xl font-bold mb-6 text-center">My Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <SkillsCard title="IT Administration" description="Hands-on experience with system administration and troubleshooting." />
-        <SkillsCard title="Enterprise Mobility Management" description="Expertise in managing and securing mobile devices and applications." />
-        <SkillsCard title="Web Development" description="Foundational skills in web technologies like Astro, Tailwind CSS, and JavaScript." />
-        <SkillsCard title="Problem-Solving" description="A strong passion for tackling and resolving complex technical issues." />
-    </div>
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10 text-center">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <SkillsCardV2 title="Python" icon="python" />
+                <SkillsCardV2 title="React" icon="react" />
+                <SkillsCardV2 title="Astro" icon="astro" />
+                <SkillsCardV2 title="Docker" icon="docker" />
+                <SkillsCardV2 title="Node.js" icon="node" />
+                <SkillsCardV2 title="Tailwind CSS" icon="tailwind" />
+            </div>
+        </div>
     </section>
 
     <!--- Stats Section -->
