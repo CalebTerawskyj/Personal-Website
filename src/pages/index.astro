@@ -6,6 +6,7 @@ import Footer from '../components/footer.astro';
 import MainLayout from '../layouts/main_layout.astro';
 import SkillsCard from '../components/SkillsCard.astro';
 import SkillsCardV2 from "../components/SkillsCardV2.astro";
+import ProjectCardV2 from '../components/ProjectCardV2.astro';
 import '../styles/global.css';
 
 import calebImage from '../assets/img/caleb_terawskyj.jpg';
@@ -70,10 +71,26 @@ import calebImage from '../assets/img/caleb_terawskyj.jpg';
     <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
 		<p class="text-lg text-gray-700 mb-8 text-center dark:text-neutral-100">I'm still very new to development, but I thought it should be good to at least have a small projects area. I'm sure this will grow as time goes.</p>
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ProjectCard title="Astro Web Development" description="You're looking at it!" link="/projects/astro_dev" tech={["astro", "tailwind"]} />
-        <ProjectCard title="Personal Management System" description="A central hub to manage my day-to-day items like notes, tasks, calendar, planner etc." link="/projects/pm_sys" tech={["tailwind", "react"]} />
-        <ProjectCard title="Basic Python Scripts" description="A few scripts to automate things in my life." link="/projects/project3" tech={["python"]} />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ProjectCardV2
+            title="Personal Website"
+            description="This very website, built with Astro and Tailwind CSS. A continuous work-in-progress, reflecting my journey in web development."
+            githubLink="https://github.com/CalebTerawskyj/Personal-Website"
+            tech={['astro', 'tailwind']}
+            status="In Progress"
+        />
+        <ProjectCardV2
+            title="Homelab & Server"
+            description="My homelab setup, running various services and experiments. A playground for learning about networking, virtualization, and self-hosting."
+            tech={['docker','linux', 'node']}
+            status="Completed"
+        />
+        <ProjectCardV2
+            title="Archive Test"
+            description="Test card to test the Archived status."
+            tech={['linux']}
+            status="Archived"
+        />
     </div>
     </section>
 

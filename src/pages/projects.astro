@@ -2,14 +2,14 @@
 import '../styles/global.css';
 import Navigation from "../components/navigation.astro"
 import MainLayout from '../layouts/main_layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectCardV2 from '../components/ProjectCardV2.astro';
 import Footer from '../components/footer.astro';
 ---
 
 <MainLayout title="Projects">
-    </MainLayout>
+</MainLayout>
 <Navigation>
-    </Navigation>
+</Navigation>
 <div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
     <div class="bg-neutral-100 text-gray-900 font-sans dark:bg-gray-800 dark:text-neutral-100">
         <section class="bg-gradient-to-r from-slate-800 via-cyan-700 to-cyan-950 text-slate-100 min-h-px1">
@@ -21,9 +21,30 @@ import Footer from '../components/footer.astro';
     <h2 class="text-3xl font-bold mb-6 text-center">My Projects</h2>
     <p class="text-lg text-gray-700 mb-8 text-center dark:text-neutral-100">Here are some of the projects I've worked on. I'm still new to development, but I hope to continue to grow this section as I learn more.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ProjectCard title="Astro Web Development" description="This website is built using Astro and Tailwind CSS. It's a work in progress, showcasing my journey in web development." link="/" tech={['astro', 'tailwind']} />
+        <ProjectCardV2
+            title="Personal Website"
+            description="This very website, built with Astro and Tailwind CSS. A continuous work-in-progress, reflecting my journey in web development."
+            link="/"
+            githubLink="https://github.com/CalebTerawskyj/Personal-Website"
+            tech={['astro', 'tailwind']}
+            status="In Progress"
+        />
+        <ProjectCardV2
+            title="Homelab & Server"
+            description="My homelab setup, running various services and experiments. A playground for learning about networking, virtualization, and self-hosting."
+            tech={['docker','linux', 'node']}
+            status="Completed"
+        />
+        <ProjectCardV2
+            title="Archive Test"
+            description="Test card to test the Archived status."
+            tech={['linux']}
+            status="Archived"
+        />
     </div>
+</section>
+</div>
 </div>
 
 <Footer>
-    </Footer>
+</Footer>
