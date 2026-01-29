@@ -1,7 +1,7 @@
 {
   "name": "e-development-personal-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.5",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,9 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.5.5",
+    "@astrojs/cloudflare": "^12.6.12",
     "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.16.6"
+    "astro": "^5.16.16"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.18",

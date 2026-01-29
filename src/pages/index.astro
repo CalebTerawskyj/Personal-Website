@@ -7,6 +7,8 @@ import MainLayout from '../layouts/main_layout.astro';
 import SkillsCard from '../components/SkillsCard.astro';
 import SkillsCardV2 from "../components/SkillsCardV2.astro";
 import ProjectCardV2 from '../components/ProjectCardV2.astro';
+import GitHubStatsSimple from '../components/GitHubStatsSimple.astro';
+import GitHubRepos from '../components/GitHubRepos.astro';
 import '../styles/global.css';
 
 import calebImage from '../assets/img/caleb_terawskyj.jpg';
@@ -53,6 +55,15 @@ This space is where I showcase my projects, share my thoughts, and connect with 
                 <SkillsCardV2 title="Node.js" icon="node" />
                 <SkillsCardV2 title="Tailwind CSS" icon="tailwind" />
             </div>
+        </div>
+    </section>
+
+    <!--- GitHub Stats Section -->
+    <section id="github" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-3xl font-bold mb-10 text-center">GitHub Activity</h2>
+        <div class="space-y-8">
+            <GitHubStatsSimple username="CalebTerawskyj" theme="dark" />
+            <GitHubRepos username="CalebTerawskyj" count={6} />
         </div>
     </section>
 
