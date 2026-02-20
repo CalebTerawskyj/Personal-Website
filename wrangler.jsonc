@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "personal-website-v1-archivede",
+  "name": "personal-website-v1-archived",
   "main": "./dist/_worker.js/index.js",
 
 "compatibility_date": "2026-02-21",
