@@ -14,7 +14,7 @@
   },
   "routes":[
   {
-      "pattern": "calebterawskyj.com",
+      "pattern": "personal-website-v1-archived",
       "custom_domain": true
     }
   ],
