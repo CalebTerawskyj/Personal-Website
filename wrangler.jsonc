@@ -1,9 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "personal-website",
+  "name": "personal-website-v1-archivede",
   "main": "./dist/_worker.js/index.js",
-  // Update to today's date
-  "compatibility_date": "2025-03-25",
+
+"compatibility_date": "2026-02-21",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
@@ -14,7 +14,7 @@
   },
   "routes":[
   {
-      "pattern": "personal-website-v1-archived",
+      "pattern": "website-v1.archived.calebterawskyj.com",
       "custom_domain": true
     }
   ],
